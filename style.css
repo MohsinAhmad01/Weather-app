@@ -1,0 +1,76 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.search-part {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+}
+
+.search-part input {
+    border: 0;
+    background: #84f9e7;
+    color: #555;
+    height: 50px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.search-part button {
+    margin-left: 10px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    border: 0;
+    outline: 0;
+    background: #84f9e7;
+    color: #555;
+    font-size: 18px;
+}
+
+.weather_description {
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+
+/* Adjust flex-basis for each weather description element */
+.wind, .humi, .temp, .pressure {
+    flex-basis: 23%; /* Adjusted width for each item */
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Apply background colors */
+.wind {
+    background-color: aqua;
+}
+
+.pressure {
+    background-color: rgb(16, 255, 255);
+}
+
+.humi {
+    background-color: rgb(160, 233, 233);
+}
+
+.temp {
+    background-color: rgb(75, 158, 158);
+}
+
+@media (max-width: 768px) {
+    .weather_description {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .wind, .humi, .temp, .pressure {
+        width: 100%;
+    }
+}
